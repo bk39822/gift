@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Keerthiga 🎉</title>
+
+<style>
+body{
+  margin:0;
+  padding:0;
+  text-align:center;
+  font-family:'Segoe UI',sans-serif;
+  background: linear-gradient(-45deg,#89f7fe,#66a6ff,#fbc2eb,#a6c1ee);
+  background-size:400% 400%;
+  animation:gradientBG 10s ease infinite;
+  overflow:hidden;
+}
+
+@keyframes gradientBG{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+h1{
+  margin-top:30px;
+  color:white;
+  font-size:40px;
+  text-shadow:0px 0px 15px #000;
+}
+
+.profile img{
+  width:300px;
+  border-radius:25px;
+  margin-top:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+  transition:0.5s;
+}
+
+.profile img:hover{
+  transform:scale(1.05);
+}
+
+.message{
+  margin-top:20px;
+  font-size:20px;
+  color:white;
+  padding:0 20px;
+}
+
+button{
+  margin-top:25px;
+  padding:12px 30px;
+  font-size:18px;
+  background:#ff9800;
+  color:white;
+  border:none;
+  border-radius:15px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#e68900;
+}
+
+.balloon{
+  position:absolute;
+  font-size:30px;
+  animation:float 8s linear infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(100vh);}
+  100%{transform:translateY(-10vh);}
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🎉 Happy Birthday Keerthiga 🎂</h1>
+
+<div class="profile">
+<img src="file:///C:/Users/bk398/OneDrive/Desktop/js/keerthiga.jpg.png" alt="Keerthiga Photo">
+</div>
+
+<div class="message">
+Happy Birthday Keerthiga 😊🎉 <br>
+Stay happy, confident and successful always! <br>
+Proud to have a friend like you 💛
+</div>
+
+<button onclick="wish()">Click for Birthday Wish 🎁</button>
+
+<script>
+
+function wish(){
+alert("Iniya Pirandha Naal Vaazhthukkal Keerthiga! 🎉😊 Stay blessed!");
+}
+
+setInterval(()=>{
+
+const balloon=document.createElement("div");
+balloon.classList.add("balloon");
+
+const items=["🎈","🎉","❤️"];
+balloon.innerHTML=items[Math.floor(Math.random()*items.length)];
+
+balloon.style.left=Math.random()*100+"vw";
+
+document.body.appendChild(balloon);
+
+setTimeout(()=>{
+balloon.remove();
+},8000);
+
+},800);
+
+</script>
+
+</body>
+</html>
